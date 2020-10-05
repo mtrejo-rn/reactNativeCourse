@@ -1,5 +1,6 @@
 import React from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
+import PropTypes from 'prop-types';
 import ResultsDetail from './ResultsDetail';
 
 const ResultList = ({title, results}) => {
@@ -15,6 +16,11 @@ const ResultList = ({title, results}) => {
       />
     </View>
   );
+};
+
+ResultList.propTypes = {
+  title: PropTypes.string.isRequired,
+  results: PropTypes.array,
 };
 
 const styles = StyleSheet.create({
